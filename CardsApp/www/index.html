@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="x-ua-compatible" content="IE=9">
+
+    <link href="css/chiara.css" rel="stylesheet">
+	  <link href="css/jquery-ui.css" rel="stylesheet">
+	  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/glyphter.css" rel="stylesheet" type="text/css" />
+    <link href="css/chiara-live.css" type="text/css" rel="stylesheet"/>
+    <link href="css/swiper.min.css" type="text/css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+
+    <title>Cards</title>
+
+</head>
+<body>
+
+<div class="c-page-container">
+
+  <div class="c-page first home swiper-container" id="Home">
+
+    <div class="swiper-wrapper">
+      <div class="swiper-slide home-left">
+        <div class="navbar">
+          <h3>Setting</h3>
+        </div>
+      </div>
+
+      <div class="swiper-slide home-center">
+        <div class="navbar">
+          <h3>Cards</h3>
+        </div>
+        <div class="bottomBox">
+          <ul>
+            <li><a class=""><span class="fa fa-flash"></span></a></li>
+            <li><a class=""><span class="fa fa-camera"></span></a></li>
+            <li><a class=""><span class="fa fa-star"></span></a></li>
+            <li><a class=""><span class="fa fa-clock-o"></span></a></li>
+            <li><a class="" onclick="app.homeSlider.slideNext();"><span class="fa fa-search"></span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="swiper-slide home-right">
+        <div class="navbar">
+      		<input type="text" class="search" name="q" placeholder="Search cards..." />
+      	</div>
+        <div class="cardList">
+      		<h3>Cards</h3>
+      		<ul>
+      			<li>
+              <div class="exagon">EC</div>
+              <a href="#" onclick="app.openCard('a1')">Enrico Colacillo</a>
+            </li>
+      			<li>
+              <div class="exagon">ML</div>
+              <a href="#" onclick="app.openCard('a2')">Marco Longhin</a>
+            </li>
+      		</ul>
+      		<h3>Brands</h3>
+      		<ul>
+      			<li>
+              <div class="exagon">LM</div>
+              <a href="#" onclick="app.openBrand('b1')">Love Marketing</a>
+            </li>
+      		</ul>
+      	</div>
+      </div>
+    </div>
+
+
+  </div>
+
+	<div class="c-page" id="CardDetail">
+    <div class="navbar big fixed topButtons">
+      <div class="left">
+        <button onclick="Chiara.multipage.close({effect:'fadeOut, slideRight'})"><img src="img/arrows.png" /></button>
+      </div>
+      <div class="center">
+        <button class="act-flip"><img src="img/circle.png" /></button>
+      </div>
+
+    </div>
+		<div class="detail">
+      <div class="top">
+        <div class="bg">
+          <img src="" />
+        </div>
+        <div class="overlay"></div>
+        <div class="market">
+          <div class="flipper">
+            <div class="avatar">
+              <img src="" />
+            </div>
+            <div class="slogan"></div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="description"></div>
+          <div class="firstname act-flip"></div>
+          <div class="lastname act-flip"></div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="links">
+          <ul>
+            <li><a class="lnk lnk-phone" target="_blank"><img src="img/links/phone.png" /></a></li>
+  				  <li><a class="lnk lnk-email" target="_blank"><img src="img/links/email.png" /></a></li>
+  				  <li><a class="lnk lnk-web" target="_blank"><img src="img/links/web.png" /></a></li>
+  				  <li><a class="lnk lnk-twitter" target="_blank"><img src="img/links/twitter.png" /></a></li>
+            <li><a class="lnk lnk-facebook" target="_blank"><img src="img/links/facebook.png" /></a></li>
+  				  <li><a class="lnk lnk-gplus" target="_blank"><img src="img/links/gplus.png" /></a></li>
+  				  <li><a class="lnk lnk-flikr" target="_blank"><img src="img/links/fl.png" /></a></li>
+  				  <li><a class="lnk lnk-youtube" target="_blank"><img src="img/links/youtube.png" /></a></li>
+            <li><a class="lnk lnk-pinterest" target="_blank"><img src="img/links/pinterest.png" /></a></li>
+            <li><a class="lnk lnk-vimeo" target="_blank"><img src="img/links/vimeo.png" /></a></li>
+            <li><a class="lnk lnk-be" target="_blank"><img src="img/links/be.png" /></a></li>
+            <li><a class="lnk lnk-wordpress" target="_blank"><img src="img/links/wp.png" /></a></li>
+            <li><a class="lnk lnk-rss" target="_blank"><img src="img/links/rs.png" /></a></li>
+            <li><a class="lnk" target="_blank"><img src="img/links/b1.png" /></a></li>
+            <li><a class="lnk" target="_blank"><img src="img/links/b2.png" /></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	</div>
+</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/chiara.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.ipad.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript">$(document).ready(function(){app.init();});</script>
+</body>
+</html>

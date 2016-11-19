@@ -1,0 +1,238 @@
+body{
+	background: #000000;
+	color:#222222;
+}
+
+.glyph{font-family: 'Glyphter';}
+a{text-decoration: none;color:#ff9900}
+
+.magictime {
+	-webkit-animation-duration: .3s;
+	-moz-animation-duration: .3s;
+	-o-animation-duration: .3s;
+	animation-duration: .3s;
+}
+
+.detail{
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+}
+
+.detail .top,
+.detail .top .bg,
+.detail .top .overlay,
+.detail .top .market,
+.detail .top .avatar,
+.detail .top .slogan{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height: 100%;
+}
+
+.detail .top{
+	overflow: hidden;
+	background: #ffffff;
+	box-shadow: 0 0 2px #333333;
+	z-index: 10;
+}
+.detail .top .bg{
+	overflow: hidden;
+	background: transparent;
+	z-index: 11;
+}
+.detail .top .bg img{height: 100%;width: auto;}
+.detail .top .overlay{
+	overflow: hidden;
+	background: rgba(0,0,0,.3);
+	z-index: 12;
+}
+.detail .top .market{
+	top:12%;
+	overflow: hidden;
+	background: transparent;
+  z-index: 20;
+	transition: 0.6s;
+	perspective: 0px;
+}
+.detail .top .market .flipper{
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.detail .top .market .flipper.turn{transform: rotateY(180deg);}
+
+.detail .top .avatar{
+	text-align: center;
+	overflow: hidden;
+	background: #000;
+  z-index: 20;
+  border: 10px solid #ffffff;
+  border-radius: 50%;
+	transform: rotateY(0deg);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.detail .avatar img{height:100%;width:auto;}
+.detail .top .slogan{
+	overflow: hidden;
+	background: transparent;
+  z-index: 19;
+	color: #ffffff;
+	font-size: 1.6em;
+	line-height: 1.2em;
+	text-align: center;
+	transform: rotateY(180deg);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: table;
+}
+.detail .top .slogan p{
+	display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+	text-shadow: 0 0 1px #555555;
+}
+
+.detail .top .info{
+	position: absolute;
+  bottom: 70px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #ffffff;
+  background: transparent;
+  z-index: 30;
+	text-align: center;
+  margin: 0 0 .6em 0;
+	transition: bottom 300ms;
+}
+
+.detail .top .info .firstname, .detail .top .info .lastname{
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+.detail .top .info .description{
+	margin:1em 0;
+	font-size: 1.2em;
+	height: 200px;
+	display:table;
+	width:100%;
+}
+
+.detail .top .info .description p{
+	display:table-cell;
+	vertical-align: middle;
+	text-align: center;
+
+}
+
+.detail .bottom{
+	position: absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height: 0px;
+	overflow: hidden;
+	background: rgba(255, 255, 255, .2);
+	z-index: 20;
+	text-align: center;
+	transition: bottom .3s ease-out;
+}
+.detail .links{padding: 1em 0;}
+.detail .links li{float:left;width:20%;}
+.detail .links li a.lnk{padding: .4em 0;display: block;margin:0 0 -4px 0;}
+.detail .links li.disabled{display: none;}
+.detail .links li a.lnk img{width: 4em;}
+
+.navbar{margin-top:20px;}
+
+.topButtons button {border:none;background: transparent;margin: 1em;}
+.topButtons button img{height:1.6em;width:auto;}
+
+.home{background: #f4f4f4;}
+.home .navbar{padding: 0 10px;background: transparent;text-align: center;height: 4.4em;}
+.home h3{margin:0;padding:0;font-size:1.4em;line-height: 2.4em;}
+input.search{
+	margin: 10px 0;
+	width:100%;
+	font-size: 1.2em;
+  padding: .8em 1em;
+  border: none;
+  background: rgba(0,0,0,.1) ;
+  color: #222222;
+	border-radius: 20px;
+}
+input.search::-webkit-input-placeholder {color: #aaaaaa;}
+input.search:-moz-placeholder {color: #aaaaaa;}
+input.search::-moz-placeholder { color: #aaaaaa;}
+input.search:-ms-input-placeholder {color: #aaaaaa;}
+
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.home .bottomBox{
+	position: absolute;
+	left: 0;
+	bottom:2em;
+	width: 100%;
+	padding:0 1em;
+}
+.home .bottomBox ul{}
+.home .bottomBox ul li{float:left;text-align: center;width: 20%;}
+.home .bottomBox ul li a{
+	width: 52px;
+	height: 64px;
+	background: url(../img/links/gray.png) no-repeat;
+	background-size: 51px;
+	margin: 6px 14px 6px 6px;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.7em;
+	line-height: 2.4em;
+	display: inline-block;
+}
+.cardList{padding:.4em 0;margin: 10px 0 0 0;}
+.cardList h3{
+	text-align: center;
+  font-size: 1.2em;
+  padding: .6em 0 0 0;
+  margin: 0;
+  line-height: 1em;
+  clear: both;
+	border-bottom: 1px solid #ccc;
+	color: #555555;
+}
+.cardList ul{}
+.cardList ul li{padding:0;clear:both;line-height: 2.4em;}
+.cardList ul li .exagon{
+	float:left;
+	width: 41px;
+	height: 46px;
+	background: url(../img/links/celeste.png) no-repeat;
+	background-size: 40px;
+	margin: 6px 14px 6px 12px;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.2em;
+	line-height: 2.8em;
+}
+.cardList ul li a{
+	display:block;
+	padding: .6em .4em;
+  color: #555555;
+  font-size: 1.4em;
+}
+.cardList ul li a:hover, .cardList ul li a:focus{background: #ffffff;}
